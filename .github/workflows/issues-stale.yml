@@ -978,7 +978,7 @@ jobs:
 
             - name: >-
                   💤 Stale › Check Condition
-              uses: actions/stale@v9
+              uses: actions/stale@v10
               with:
                   repo-token: ${{ secrets.ADMINSERV_TOKEN_CL || github.token }}
                   stale-issue-message: |

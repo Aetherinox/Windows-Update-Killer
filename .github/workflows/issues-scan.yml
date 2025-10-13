@@ -408,7 +408,7 @@ jobs:
             - name: >-
                   📄 Get changed files
               id: task_prscan_changed_files_get
-              uses: tj-actions/changed-files@v46
+              uses: tj-actions/changed-files@v47
               with:
                   separator: ","
 

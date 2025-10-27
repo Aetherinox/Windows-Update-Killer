@@ -432,17 +432,17 @@ jobs:
             # #
 
             - name: '📁 Download › Artifacts › wputility.bat'
-              uses: actions/download-artifact@v4
+              uses: actions/download-artifact@v6
               with:
                   name: wputility.bat
 
             - name: '📁 Download › Artifacts › windows-updates-pause.reg'
-              uses: actions/download-artifact@v4
+              uses: actions/download-artifact@v6
               with:
                   name: windows-updates-pause.reg
 
             - name: '📁 Download › Artifacts › windows-updates-unpause.reg'
-              uses: actions/download-artifact@v4
+              uses: actions/download-artifact@v6
               with:
                   name: windows-updates-unpause.reg
 

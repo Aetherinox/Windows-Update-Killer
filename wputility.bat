@@ -2203,7 +2203,7 @@ goto :EOF
             echo   %cyand% Notice  %u%        No package %yellowl%%package%%u% found, skipping%u%
             timeout /t 3 > nul
         ) else (
-            echo   %cyand% Notice  %u%        Found package %yellowl%%package%%u%, uninstallling ...
+            echo   %cyand% Notice  %u%        Found package %yellowl%%package%%u%, uninstalling ...
             winget uninstall --id %package%
 
             if %errorlevel% neq 0 (
@@ -2649,7 +2649,7 @@ goto :EOF
 :taskTelemetryDisable
     setlocal
 
-    echo   %cyand% Motice  %u%        Disable %goldm%Microsoft Windows%u% telemetry and tracking%u%
+    echo   %cyand% Notice  %u%        Disable %goldm%Microsoft Windows%u% telemetry and tracking%u%
     reg add "HKLM\SOFTWARE\Policies\Microsoft\MRT" /v "DontOfferThroughWUAU" /t REG_DWORD /d "0x00000001" /f > nul
     reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Device Metadata" /v "PreventDeviceMetadataFromNetwork" /t REG_DWORD /d "0x00000001" /f > nul
     reg add "HKCU\SOFTWARE\Policies\Microsoft\Windows\DataCollection" /v "AllowTelemetry" /t REG_DWORD /d "0x00000000" /f > nul
@@ -2745,7 +2745,7 @@ goto :EOF
         goto sessError
     )
 
-    echo   %cyand% Motice  %u%        Disable %goldm%Microsoft Office%u% Telemetry Settings
+    echo   %cyand% Notice  %u%        Disable %goldm%Microsoft Office%u% Telemetry Settings
 	reg add "HKCU\SOFTWARE\Microsoft\Office\15.0\Common" /v "QMEnable" /t REG_DWORD /d "0x00000000" /f > nul
 	reg add "HKCU\SOFTWARE\Microsoft\Office\15.0\Common\Feedback" /v "Enabled" /t REG_DWORD /d "0x00000000" /f > nul
 	reg add "HKCU\SOFTWARE\Microsoft\Office\15.0\Outlook\Options\Calendar" /v "EnableCalendarLogging" /t REG_DWORD /d "0x00000000" /f > nul
@@ -2889,7 +2889,7 @@ goto :EOF
 :taskDebloatServices
     setlocal
 
-    echo   %cyand% Motice  %u%        %goldm%Disabling / debloat%u% Windows services%u%
+    echo   %cyand% Notice  %u%        %goldm%Disabling / debloat%u% Windows services%u%
 
     for /f "tokens=2-3* delims=[]|=" %%v in ('set servicesUseless[ 2^>nul') do (
         set "service=%u%%%~w %pink%[%%~x] !spaces!%u%"
